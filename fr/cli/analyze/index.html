@@ -12,7 +12,7 @@
         <meta name="author" content="ludo-technologies">
       
       
-        <link rel="canonical" href="https://docs.codescan.dev/fr/cli/analyze/">
+        <link rel="canonical" href="https://docs.codescan.dev/pyscn/fr/cli/analyze/">
       
       
         <link rel="prev" href="../">
@@ -477,6 +477,25 @@
     
   
   FAQ
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="https://docs.codescan.dev/polyscan/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Polyscan
 
       </a>
     </li>
@@ -3251,6 +3270,33 @@
   
 
     
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://docs.codescan.dev/polyscan/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Polyscan
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -3583,6 +3629,11 @@
 <td>Similarité minimale (0.0–1.0) pour la détection de clones.</td>
 </tr>
 <tr>
+<td><code>--clone-group-mode &lt;M&gt;</code></td>
+<td><code>complete_linkage</code></td>
+<td>Stratégie de regroupement des clones : <code>connected</code>, <code>star</code>, <code>complete_linkage</code>, <code>k_core</code>, <code>centroid</code>.</td>
+</tr>
+<tr>
 <td><code>--min-cbo &lt;N&gt;</code></td>
 <td><code>0</code></td>
 <td>N'affiche que les classes dont le CBO est ≥ N.</td>
@@ -3635,7 +3686,7 @@
 </span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="c1"># JSON pour les pipelines</span>
 </span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>pyscn<span class="w"> </span>analyze<span class="w"> </span>--json<span class="w"> </span>src/
 </span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>
-</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="c1"># Ignorer l&#39;analyseur le plus lent</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="c1"># Ignorer l'analyseur le plus lent</span>
 </span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>pyscn<span class="w"> </span>analyze<span class="w"> </span>--skip-clones<span class="w"> </span>src/
 </span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>
 </span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="c1"># Uniquement complexité et code mort</span>

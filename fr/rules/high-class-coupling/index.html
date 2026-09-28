@@ -12,7 +12,7 @@
         <meta name="author" content="ludo-technologies">
       
       
-        <link rel="canonical" href="https://docs.codescan.dev/fr/rules/high-class-coupling/">
+        <link rel="canonical" href="https://docs.codescan.dev/pyscn/fr/rules/high-class-coupling/">
       
       
         <link rel="prev" href="../high-cyclomatic-complexity/">
@@ -477,6 +477,25 @@
     
   
   FAQ
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="https://docs.codescan.dev/polyscan/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Polyscan
 
       </a>
     </li>
@@ -3222,6 +3241,33 @@
   
 
     
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://docs.codescan.dev/polyscan/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Polyscan
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -3410,7 +3456,7 @@
 <strong>Sévérité</strong> : Configurable par seuil<br />
 <strong>Déclenché par</strong> : <code>pyscn analyze</code>, <code>pyscn check</code></p>
 <h2 id="ce-que-fait-cette-regle">Ce que fait cette règle<a class="headerlink" href="#ce-que-fait-cette-regle" title="Permanent link">&para;</a></h2>
-<p>Signale les classes qui dépendent de trop d'autres classes (la métrique Coupling Between Objects, ou CBO, de Chidamber &amp; Kemerer). pyscn compte le nombre de classes distinctes qu'une classe référence via l'héritage, les annotations de type, l'instanciation directe, l'accès aux attributs sur des modules importés et les imports.</p>
+<p>Signale les classes qui dépendent de trop d'autres classes (la métrique Coupling Between Objects, ou CBO, de Chidamber &amp; Kemerer). pyscn compte le nombre de classes distinctes qu'une classe référence via l'héritage, l'instanciation directe, l'accès aux attributs sur des modules importés et les imports. Les annotations de type sont des déclarations, pas des usages : elles apparaissent dans le détail <code>type_hint_dependencies</code> mais n'entrent pas dans le score.</p>
 <p>En clair : <em>trop de choses doivent être en place pour que cette classe fonctionne.</em></p>
 <h2 id="pourquoi-est-ce-un-probleme">Pourquoi est-ce un problème ?<a class="headerlink" href="#pourquoi-est-ce-un-probleme" title="Permanent link">&para;</a></h2>
 <p>Une classe fortement couplée est difficile à vivre :</p>
@@ -3436,7 +3482,7 @@
 </span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">paypal</span> <span class="o">=</span> <span class="n">PayPalGateway</span><span class="p">()</span>
 </span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">email</span> <span class="o">=</span> <span class="n">SendGridClient</span><span class="p">()</span>
 </span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">sms</span> <span class="o">=</span> <span class="n">TwilioClient</span><span class="p">()</span>
-</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">blobs</span> <span class="o">=</span> <span class="n">S3Bucket</span><span class="p">(</span><span class="s2">&quot;orders&quot;</span><span class="p">)</span>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">blobs</span> <span class="o">=</span> <span class="n">S3Bucket</span><span class="p">(</span><span class="s2">"orders"</span><span class="p">)</span>
 </span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">db</span> <span class="o">=</span> <span class="n">PostgresConnection</span><span class="p">()</span>
 </span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">audit</span> <span class="o">=</span> <span class="n">DatadogLogger</span><span class="p">()</span>
 </span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">auth</span> <span class="o">=</span> <span class="n">OktaClient</span><span class="p">()</span>

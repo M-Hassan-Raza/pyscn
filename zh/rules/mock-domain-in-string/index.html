@@ -12,7 +12,7 @@
         <meta name="author" content="ludo-technologies">
       
       
-        <link rel="canonical" href="https://docs.codescan.dev/zh/rules/mock-domain-in-string/">
+        <link rel="canonical" href="https://docs.codescan.dev/pyscn/zh/rules/mock-domain-in-string/">
       
       
         <link rel="prev" href="../mock-keyword-in-code/">
@@ -477,6 +477,25 @@
     
   
   常见问题
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="https://docs.codescan.dev/polyscan/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Polyscan
 
       </a>
     </li>
@@ -3222,6 +3241,33 @@
   
 
     
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://docs.codescan.dev/polyscan/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Polyscan
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -3419,7 +3465,7 @@
 </ul>
 <p>在这两种情况下，失败模式都是静默的：请求成功（域名解析到文档页面或什么都没有），不会引发异常，只有当有人问为什么注册邮件没有到达时才会发现这个 bug。</p>
 <h2 id="_3">示例<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">SIGNUP_URL</span> <span class="o">=</span> <span class="s2">&quot;https://example.com/signup&quot;</span>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">SIGNUP_URL</span> <span class="o">=</span> <span class="s2">"https://example.com/signup"</span>
 </span></code></pre></div>
 <h2 id="_4">修正示例<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
 <p>将值移到配置中，或内联真实 URL。</p>
